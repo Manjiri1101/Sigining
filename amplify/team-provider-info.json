@@ -13,7 +13,14 @@
     },
     "categories": {
       "auth": {
-        "signinb65c0d5b": {}
+        "signinb65c0d5b": {
+          "hostedUIProviderCreds": "[]"
+        }
+      },
+      "function": {
+        "signinb65c0d5bPostConfirmation": {
+          "GROUP": "user"
+        }
       }
     }
   }
