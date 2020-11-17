@@ -1,0 +1,72 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-signin-dev-151624-authRole",
+      "UnauthRoleArn": "arn:aws:iam::328229711407:role/amplify-signin-dev-151624-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::328229711407:role/amplify-signin-dev-151624-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-signin-dev-151624-deployment",
+      "UnauthRoleName": "amplify-signin-dev-151624-unauthRole",
+      "StackName": "amplify-signin-dev-151624",
+      "StackId": "arn:aws:cloudformation:us-east-1:328229711407:stack/amplify-signin-dev-151624/c2818920-2861-11eb-b54f-12cd1b220bcb",
+      "AmplifyAppId": "d179b0bu1ff3p2"
+    }
+  },
+  "auth": {
+    "signinb65c0d5b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "signinb65c0d5bPostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-signin-dev-151624-deployment/amplify-cfn-templates/auth/signinb65c0d5b-cloudformation-template.yml",
+        "logicalId": "authsigninb65c0d5b"
+      },
+      "lastPushTimeStamp": "2020-11-17T03:07:26.578Z",
+      "output": {
+        "AppClientSecret": "d6161hrft2vdn3nqdb7ovg93g542jddph8b3hf5qu8aangbbfb2",
+        "UserPoolId": "us-east-1_ApHCmpIhV",
+        "AppClientIDWeb": "jlj3ta594q3c322i1hqmqngov",
+        "AppClientID": "ksr2n3irqvgv7vbjs1i6o7psq",
+        "IdentityPoolId": "us-east-1:f41f87e1-334f-425e-8f87-af124fd93167",
+        "IdentityPoolName": "signinb65c0d5b_identitypool_b65c0d5b__dev",
+        "UserPoolName": "signinb65c0d5b_userpool_b65c0d5b",
+        "HostedUIDomain": "signin-dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3001/\"],\"LogoutURLs\":[\"http://localhost:3001/home/\"]}"
+      },
+      "lastPushDirHash": "/K2kBbwxCiGd1fs33xEz/so5IDY="
+    }
+  },
+  "function": {
+    "signinb65c0d5bPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2020-11-17T03:03:48.294Z",
+      "lastPackageTimeStamp": "2020-11-17T03:03:48.785Z",
+      "distZipFilename": "signinb65c0d5bPostConfirmation-775974555633684a3566-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-signin-dev-151624-deployment/amplify-cfn-templates/function/signinb65c0d5bPostConfirmation-cloudformation-template.json",
+        "logicalId": "functionsigninb65c0d5bPostConfirmation"
+      },
+      "lastPushTimeStamp": "2020-11-17T03:07:26.578Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:328229711407:function:signinb65c0d5bPostConfirmation-dev",
+        "Name": "signinb65c0d5bPostConfirmation-dev",
+        "LambdaExecutionRole": "signinb65c0d5bPostConfirmation-dev"
+      },
+      "lastPushDirHash": "kn9LA3k/hjqsG9PXl1/QZxWrK3k="
+    }
+  }
+}
